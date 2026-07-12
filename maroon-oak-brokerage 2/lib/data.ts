@@ -28,7 +28,11 @@ export const siteConfig = {
 // CoverageBlock detail sections) is guaranteed unique and traceable to exactly one
 // place it renders. `heroImages` is re-exported here unchanged so no component import
 // needs to change; the manifest itself is the new single source of truth.
-export { imageManifest as heroImages } from "./imageManifest";
+import { imageManifest } from "./imageManifest";
+import type { ImageManifestKey, ManifestEntry } from "./imageManifest";
+
+export const heroImages = imageManifest;
+export type { ImageManifestKey, ManifestEntry };
 export type { ImageManifestKey, ManifestEntry } from "./imageManifest";
 
 
