@@ -57,12 +57,21 @@ const productIcon: Record<string, typeof CarIcon> = {
   "risk-management": CheckCircleIcon,
 };
 
-export default function CoverageBlock({ product, reverse }: { product: Product; reverse?: boolean }) {
+export default function CoverageBlock({
+  product,
+  reverse,
+}: {
+  product: Product;
+  reverse?: boolean;
+}) {
   const Icon = productIcon[product.id] ?? ShieldIcon;
-const image =
-  product.imageKey && product.imageKey in heroImages
-    ? heroImages[product.imageKey as keyof typeof heroImages]
-    : undefined;
+
+  const image =
+    product.imageKey && product.imageKey in heroImages
+      ? heroImages[product.imageKey as keyof typeof heroImages]
+      : undefined;
+
+  return (
     <div id={product.id} className="border-b border-charcoal/10 py-16 last:border-b-0">
       <div className="mx-auto max-w-[1200px] px-8">
         <div
