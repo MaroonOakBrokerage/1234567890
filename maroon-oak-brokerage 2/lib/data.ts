@@ -33,9 +33,6 @@ import type { ImageManifestKey, ManifestEntry } from "./imageManifest";
 
 export const heroImages = imageManifest;
 export type { ImageManifestKey, ManifestEntry };
-export type { ImageManifestKey, ManifestEntry } from "./imageManifest";
-
-
 export type HeroImage = (typeof heroImages)[keyof typeof heroImages];
 
 // Shared coverage-line option lists used by both the hero toggle and the
